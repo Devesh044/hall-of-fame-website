@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load static %}
+  <head>
+    <link href="{% static 'test.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+  <script src="{% static 'test.js' %}" charset="utf-8"></script>
+    <meta charset="utf-8">
+
+    <title> Hall of Fame Vidz </title>      </head>
+  <body>
+
+<div class="header">
+  <nav>
+    <div class="nav-1 container">
+      <div class="brand invert"> <img src="http://www.dannyb.me/posts/2014/01/unity/unity.png" alt="" width="140px"/></div>
+      <ul>
+         {% if user.is_authenticated %}
+
+        <li><a href="{% url 'logout' %}">Log Out</a></li>
+         <li><a href="{% url 'create_hall'  %}">Create HALL</a></li>
+         <li><a href="{% url 'HALL'  %}">YOUR HALL</a></li>
+         {% else %}
+         <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+        <li><a href="{% url 'login' %}">Log In</a></li>
+         {% endif %}
+         {% if user.is_authenticated == False %}
+          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+           {% endif %}
+
+        <li><a href="{% url 'Community' %}">Community</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="jumbotron">
+    <div class="cover-img"></div>
+    <div class="container">
+      <div class="main-header">Hall of Fame
+        <div class="main-sub-header">by StudioDD</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% block content %}
+{% endblock %}
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+
+  </body>
+</html>

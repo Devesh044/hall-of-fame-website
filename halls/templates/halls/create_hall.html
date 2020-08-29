@@ -1,0 +1,34 @@
+{% extends 'halls/base1.html' %}
+{% block content %}
+
+
+
+<div class="container">
+
+
+<div class="jumbotron">
+<h2>Create Hall oF Fame</h2>
+
+  <form method="POST">
+{% csrf_token %}
+  {% load widget_tweaks %}
+  {% for field in form %}
+<div class="form-group {% if field.errors %}alert alert-danger{% endif %}">
+  {{ field.error }}
+  {{ field.label_tag }}
+  {% render_field field class="form-control" %}
+</div>
+{% endfor %}
+
+
+
+    <input type="submit" name="" value="Create Hall" class="btn btn-primary">
+
+
+  </form>
+
+
+</div>
+</div>
+
+{% endblock %}

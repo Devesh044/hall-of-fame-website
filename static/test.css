@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+div {
+  transition: all 2s ease;
+}
+
+.invert {
+  filter: invert(100%) contrast(200%);
+}
+
+.header {
+  display: flex;
+  height: 100vh;
+}
+
+nav {
+  width: 100%;
+}
+
+.nav-1 {
+  display: flex;
+  height: 70px;
+  padding: 15px;
+  color: white;
+}
+.nav-1 ul {
+  display: flex;
+  list-style: none;
+}
+.nav-1 a {
+  display: inline-block;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.jumbotron {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.jumbotron .cover-img {
+  background: url("https://unity.com/sites/default/files/styles/16_9_xl/public/2017-10/HERO%20BG_1.jpg?itok=xEEh52af");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-header {
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-weight: 1000;
+  font-size: 5rem;
+  margin-top: -5rem;
+}
+.main-header .main-sub-header {
+  color: white;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.section-1, .section-2, .section-3 {
+  margin-top: 5rem;
+}
+
+.section-3 {
+  margin-top: 12rem;
+}
+
+.section-header {
+  color: black;
+  font-weight: 1000;
+  font-size: 4rem;
+}
+
+.section-padding {
+  padding: 0 18rem;
+}
+
+.section-text {
+  font-size: 1.1rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  height: auto;
+  margin-top: 5rem;
+}
+.section-container img {
+  display: flex;
+  padding: 0 5rem;
+  margin: 0 auto;
+}
+.section-container .caption {
+  display: flex;
+  align-self: start;
+  width: 75%;
+  margin: auto;
+  font-size: 0.9rem;
+  color: metallicgrey;
+  line-height: 1.5;
+  padding: 0.3rem 0;
+}
+
+.section-2 iframe {
+  display: flex;
+  align-self: center;
+  margin-top: 5rem;
+  height: 632px;
+  width: 100%;
+  border-radius: 7px;
+  box-shadow: 0 5px 4px rgba(0, 1, 1, 0.1);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+}
+
+.section-3 img {
+  display: grid;
+  align-self: flex-start;
+  width: 100%;
+}
+.section-3 .content p {
+  font-size: 1.15rem;
+  color: metallicgrey;
+  line-height: 1.5;
+  padding: 0.3rem 0;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.flex-wrap ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.flex-wrap li {
+  margin: 0 0.4em;
+}
+.flex-wrap img {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a:hover {
+  color: black;
+}
+
+.section-1 img, .section-2 img, .section-3 img, .section-4 img {
+  transition: all 0.7s ease;
+}
+
+img:hover {
+  transform: scale(1.01);
+}
+
+@media (min-width: 768px) {
+  .container, .section-container {
+    width: 750px;
+  }
+
+  .section-padding {
+    padding: 0 5rem;
+  }
+}
+@media (min-width: 992px) {
+  .container, .section-container {
+    width: 970px;
+  }
+
+  .section-padding {
+    padding: 0 11rem;
+  }
+}
+@media (min-width: 1200px) {
+  .container, .section-container {
+    width: 1170px;
+  }
+
+  .section-padding {
+    padding: 0 18rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .section-padding {
+    padding: 0 3rem;
+  }
+
+  .section-container img {
+    padding: 0 1rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .section-container .caption {
+    width: 100%;
+  }
+
+  .section-2 iframe {
+    height: 362px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .flex-wrap ul {
+    flex-flow: column;
+  }
+  .flex-wrap ul li {
+    margin: 1em 0;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .section-padding {
+    padding: 0 0.1rem;
+  }
+
+  .section-container img {
+    padding: 0 0.1rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .section-container .caption {
+    width: 100%;
+  }
+
+  .section-2 iframe {
+    height: 262px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .flex-wrap ul {
+    flex-flow: column;
+  }
+  .flex-wrap ul li {
+    margin: 0.4em 0;
+  }
+}

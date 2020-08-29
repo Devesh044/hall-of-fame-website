@@ -1,0 +1,85 @@
+ {% extends 'halls/base1.html' %}
+ {% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="{% static 'signup.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+  <script src="{% static 'signup.js' %}" charset="utf-8"></script>
+    <title></title>
+  </head>
+  <body>
+
+
+<div class="jumbotron">
+
+
+
+
+
+
+          <form class="" action="" method="POST">
+               {% csrf_token %}
+               {% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
+               {% load widget_tweaks %}
+               {% for field in form %}
+             <div class="form-group {% if field.errors %}alert alert-danger{% endif %}">
+               {{ field.error }}
+               {{ field.label_tag }}
+               {% render_field field class="form-control" %}
+               {% if field.help_text %}<small class="text-muted">{{ field.help_text|safe }}</small>{% endif %}
+             </div>
+  {% endfor %}
+					 <!-- <h2 class="form__title">Sign Up</h2>
+					<input type="text" placeholder="User" class="input" />
+					<input type="email" placeholder="Email" class="input" />
+					<input type="password" placeholder="Password" class="input" /> -->
+					<button class="btn">Sign Up</button>
+  <!-- </div> -->
+			 <!-- </div> -->
+
+			<!-- Sign In -->
+			<!-- <div class="container__form container--signin">
+				<form action="#" class="form" id="form2">
+
+					<h2 class="form__title">Sign In</h2>
+					<input type="email" placeholder="Email" class="input" />
+					<input type="password" placeholder="Password" class="input" />
+					<a href="#" class="link">Forgot your password?</a>
+					<button class="btn">Sign In</button>
+				</form>
+			</div>  -->
+
+			<!-- Overlay -->
+			<!-- <div class="container__overlay">
+				<div class="overlay">
+					<div class="overlay__panel overlay--left">
+						<button class="btn" id="signIn">Sign In</button>
+					</div>
+					<div class="overlay__panel overlay--right">
+						<button class="btn" id="signUp">Sign Up</button>
+					</div>
+				</div>
+			</div> -->
+
+
+
+      </form>
+
+          </div>
+          <!-- Latest compiled and minified CSS -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+          <!-- jQuery library -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+          <!-- Popper JS -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+          <!-- Latest compiled JavaScript -->
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+{% endblock %}
