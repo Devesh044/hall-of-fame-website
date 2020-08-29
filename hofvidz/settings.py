@@ -26,7 +26,7 @@ SECRET_KEY = '^%ydlk%-ouyy#_kub217ny^ngxo5v7xoh19^vtap%z4it%j_^u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nameless-reaches-91516.herokuapp.com',]
 
 
 LOGIN_URL= 'login'
